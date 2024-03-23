@@ -1,0 +1,35 @@
+[package]
+name = "http_vs_grpc"
+authors = ["Tirtadwipa Manunggal <tirtadwipa.manunggal@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "http"
+path = "src/http.rs"
+
+[[bin]]
+name = "grpc-client"
+path = "src/grpc-client.rs"
+
+[[bin]]
+name = "grpc-server"
+path = "src/grpc-server.rs"
+
+[dependencies]
+actix-web = "4"
+prost = "0.12"
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.114"
+tonic = "0.11.0"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+tonic-web = "0.11.0"
+hyper = {version = "0.14.0", features = ['full']}
+tower = "0.4.13"
+chrono = "0.4.35"
+
+ 
+[build-dependencies]
+tonic-build = "0.11.0"
+
+

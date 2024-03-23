@@ -1,0 +1,31 @@
+ 
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.book";
+option java_outer_classname = "BookProto";
+
+package book;
+
+service Library {
+  rpc PingPong (BookRequest) returns (BookResponse);
+}
+
+message BookRequest {
+  int64 id = 1;
+  string title = 2;
+  string author = 3;
+  string description = 4;
+  int32 published_at = 5;  
+}
+
+message BookResponse {
+  int64 id = 1;
+  string title = 2;
+  string author = 3;
+  string description = 4;
+  int32 published_at = 5;  
+}
+
+
+ 
