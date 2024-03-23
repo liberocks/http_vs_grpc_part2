@@ -266,6 +266,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ResultCard(
                   httpData: _httpResult,
                   grpcData: _grpcResult,
+                  concurrencies: _concurrencies,
                 )),
             Visibility(
               visible: _step == 5,

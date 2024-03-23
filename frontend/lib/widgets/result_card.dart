@@ -3,10 +3,11 @@ import 'package:frontend/model/model.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ResultCard extends StatelessWidget {
-  const ResultCard({super.key, required this.httpData, required this.grpcData});
+  const ResultCard({super.key, required this.httpData, required this.grpcData,required this.concurrencies,});
 
   final Result httpData;
   final Result grpcData;
+  final int concurrencies; 
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +50,14 @@ class ResultCard extends StatelessWidget {
       ).wFull(context).py8().px16(),
       const Divider().px16(),
       HStack(
+        [
+          Text(concurrencies.toString()).text.base.make(),
+          const Text('Concurrencies').text.lg.make(),
+          Text(concurrencies.toString()).text.base.make(),
+        ],
+        alignment: MainAxisAlignment.spaceBetween,
+      ).wFull(context).py8().px16(),
+      const Divider().px16(),      HStack(
         [
           Text(httpData.requests.toString()).text.base.make(),
           const Text('Samples').text.lg.make(),
