@@ -39,4 +39,3 @@ Running 3 concurrencies
 
 ## Conclusion
 gRPC is much faster than HTTP. The latency is lower and the throughput is higher. This is because gRPC uses HTTP/2 and binary serialization, which makes it faster than HTTP. However, gRPC is not a silver bullet and it has its own trade-offs. For example, gRPC is not as easy to debug as HTTP and it is not as widely used as HTTP. Therefore, it is important to consider the trade-offs before choosing gRPC over HTTP.
-```
